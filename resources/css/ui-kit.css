@@ -1,0 +1,58 @@
+/* vm-engine/ui-kit: imported by the host's app.css. */
+@source '../views';
+/* Class strings built in PHP (component colour maps, Support/Styles.php). */
+@source '../../src';
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* flatpickr: match Flux (zinc, accent, dark mode). @apply only; dark rules sit under .dark. */
+.flatpickr-calendar {
+    @apply rounded-lg border border-zinc-200 bg-white font-sans text-zinc-800 shadow-xs;
+}
+.flatpickr-calendar.arrowTop::before,
+.flatpickr-calendar.arrowTop::after,
+.flatpickr-calendar.arrowBottom::before,
+.flatpickr-calendar.arrowBottom::after {
+    display: none;
+}
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover,
+.flatpickr-day.selected:focus,
+.flatpickr-monthSelect-month.selected,
+.flatpickr-monthSelect-month.selected:hover {
+    @apply border-accent bg-accent text-accent-foreground;
+}
+.flatpickr-day.today {
+    @apply border-zinc-300;
+}
+.dark .flatpickr-calendar {
+    @apply border-zinc-600 bg-zinc-700 text-white;
+    box-shadow: none;
+}
+.dark .flatpickr-months .flatpickr-month,
+.dark .flatpickr-current-month input.cur-year,
+.dark .flatpickr-current-month .flatpickr-monthDropdown-months,
+.dark .flatpickr-months .flatpickr-prev-month,
+.dark .flatpickr-months .flatpickr-next-month,
+.dark span.flatpickr-weekday,
+.dark .flatpickr-day,
+.dark .flatpickr-monthSelect-month {
+    @apply text-white;
+    fill: currentColor;
+}
+.dark .flatpickr-current-month .flatpickr-monthDropdown-months {
+    @apply bg-zinc-700;
+}
+.dark .flatpickr-day:hover,
+.dark .flatpickr-day:focus,
+.dark .flatpickr-monthSelect-month:hover {
+    @apply border-zinc-600 bg-zinc-600;
+}
+.dark .flatpickr-day.prevMonthDay,
+.dark .flatpickr-day.nextMonthDay,
+.dark .flatpickr-day.flatpickr-disabled {
+    @apply text-zinc-500;
+}
+/* Jodit uses its built-in dark theme (rte.js), no overrides needed. */

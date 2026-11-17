@@ -1,0 +1,5 @@
+# Used by larastan (and `vendor/bin/testbench`) to boot an app with the package registered.
+providers:
+  - Livewire\LivewireServiceProvider
+  - Flux\FluxServiceProvider
+  - VmEngine\UiKit\UiKitServiceProvider

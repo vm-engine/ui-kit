@@ -1,0 +1,18 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+# Livewire MFC classes (resources/views/livewire/*/*.php) are anonymous classes
+# whose computed properties and view() are runtime magic larastan can't see,
+# so only src/ is analysed (same as webms and file-manager).
+parameters:
+    level: 7
+    phpVersion: 80300
+    paths:
+        - src
+    tmpDir: build/phpstan
+    ignoreErrors:
+        # Used only by the Livewire MFC classes (bell, list), which sit outside the analysed paths.
+        -
+            identifier: trait.unused
+            paths:
+                - src/Notifications/InteractsWithNotifications.php
