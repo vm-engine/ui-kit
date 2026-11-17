@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-11-17)
 
 First release: Synapse v3.11.0 components ported to a standalone package that sits next to free Flux.
 
